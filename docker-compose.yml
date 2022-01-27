@@ -24,13 +24,15 @@ services:
     build:
       context: ../backend
       dockerfile: Dockerfile
+    env_file:
+      - ./conf/db.env
     depends_on:
       - mysql_server
     command: bash -c "npm install && npm start"
     volumes:
       - ./../backend/:/usr/app
     ports:
-      - "3010:3005"
+      - "5000:3000"
     networks:
       - poc_contaCerta
 
