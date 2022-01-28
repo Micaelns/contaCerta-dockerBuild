@@ -15,7 +15,6 @@ services:
     volumes:
       - ./volumes/db/MySql/data:/var/lib/mysql:rw
       - ./volumes/db/MySql/conf/mysql.cnf:/etc/mysql/conf.d/custom.cnf
-      - ./volumes/db/MySql/Scripts/up:/docker-entrypoint-initdb.d
     networks:
       - poc_contaCerta
 
